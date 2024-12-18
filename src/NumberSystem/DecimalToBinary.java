@@ -9,12 +9,12 @@ public class DecimalToBinary {
 
         System.out.println("Enter a decimal number: ");
         int number = scanner.nextInt();
-        String result = "";
+        StringBuilder result = new StringBuilder();
 
         while(number>0){
             int rem = number % 2;
             number = number / 2;
-            result = rem + result;
+            result.insert(0, rem);
         }
 
         System.out.println(result);
